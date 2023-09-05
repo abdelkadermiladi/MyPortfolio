@@ -1,0 +1,137 @@
+.profile-container {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: space-between; /* Add space between the left and right content */
+}
+
+
+/* CSS for the hover effect on icons */
+.profile-container .fa {
+  margin: 0px 5px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: all 0.3s ease; /* Add smooth transition */
+  position: relative; /* Add relative positioning to create a stacking context */
+}
+
+/* Increase the icon size on hover */
+.profile-container .fa:hover {
+  font-size: 40px;
+}
+
+/* Style the tooltip */
+.profile-container .fa::after {
+  content: attr(data-tooltip); /* Display the tooltip text from data-tooltip attribute */
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7); /* Background color for the tooltip */
+  color: #fff; /* Text color for the tooltip */
+  padding: 5px 10px; /* Padding for the tooltip */
+  border-radius: 5px; /* Rounded corners for the tooltip */
+  opacity: 0; /* Initially hide the tooltip */
+  transition: opacity 0.3s ease;
+  top: 100%; /* Position the tooltip below the icon */
+  left: 50%; /* Center the tooltip horizontally */
+  transform: translateX(-50%); /* Center the tooltip horizontally */
+  font-size: 14px;
+}
+
+/* Show the tooltip on hover */
+.profile-container .fa:hover::after {
+  opacity: 1;
+}
+
+.left-content {
+  flex: 1; /* Take up available space on the left */
+  text-align: center; /* Center text horizontally */
+  padding: 20px; /* Add padding as needed */
+}
+
+.profile-picture {
+  flex: 1; /* Take up available space on the right */
+  padding-right: 80px; /* Add padding to the right of the profile picture */
+  text-align: right; /* Align text content to the right */
+}
+
+.fa {
+  margin: 0px 5px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: all 0.3s ease; /* Add smooth transition */
+}
+
+.fa:hover {
+  font-size: 40px; /* Increase the size on hover */
+}
+
+.profile-pic {
+  max-width: 100%; /* Ensure the image scales down as needed */
+  height: auto;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Display children in a column layout */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center button text horizontally */
+  margin-top: 20px; /* Add space between contact info and button */
+}
+
+.download-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+}
+
+.download-btn:active {
+  transform: scale(0.95);
+}
+
+
+.profile-pic-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.profile-pic {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.new-profile-pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  max-width: 100%; /* Ensure the image scales down as needed */
+  height: auto;
+}
+
+.profile-pic-container:hover .profile-pic {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.profile-pic-container:hover .new-profile-pic {
+  opacity: 1;
+  transform: scale(1);
+}

@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="profile-container" [@fadeInOut]>
+  <div class="left-content">
+    <h1>Abdelkader MILADI</h1>
+    <h3>Final Year ICT Engineering Student at SUP’COM</h3><br>
+    <div><h4>My linkedin profile:<a href="https://www.linkedin.com/in/abdelkader-miladi" class="fa fa-linkedin" target="_blank" data-tooltip="My Linkedin Profile"></a></h4></div>
+    <div><h4>My Github Account:<a href= "https://github.com/abdelkadermiladi" class="fa fa-github" target="_blank" data-tooltip="My Github Account"></a></h4></div>
+    <br>
+    <div class="contact-info">
+      <h1><b>Contact:</b></h1>
+      <h4><i class="fa fa-phone" data-tooltip="My phone number"></i> +216 20 86 25 26</h4>
+    <h4><i class="fa fa-envelope" data-tooltip="My email address"></i> abdelkader.miladi@supcom.tn</h4>
+    </div>
+    
+    <div class="button-container">
+      <a href="/assets/AbdelkaderMiladiCV.pdf" download="Abdelkader_Miladi_CV.pdf" [@fadeInOut]>
+        <button class="download-btn" (click)="downloadCV()">
+          <i class="fa fa-download" data-tooltip="Click to download"></i> Download CV
+        </button>
+      </a>
+    </div>
+  </div>
+  
+  <div class="profile-picture">
+    <div class="profile-pic-container">
+      <img src="../../../assets/developer.png" class="profile-pic" alt="Profile Picture">
+      <img src="../../../assets/MiladiAbdelkader.jpg" class="new-profile-pic" alt="New Profile Picture">
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,26 @@
+<section id="contact">
+
+      <div class="contact-form-wrapper col-md-8">
+        <form (ngSubmit)="submitForm()">
+
+           <div class="form-item" [@fadeInOut]>
+            <input type="text" name="sender" required [(ngModel)]="sender">
+
+            <label>Name:</label>
+          </div>
+          <div class="form-item" [@fadeInOut]>
+            <input type="text" name="email" required [(ngModel)]="email">
+
+            <label>Email:</label>
+          </div>
+          <div class="form-item"[@fadeInOut] >
+            <textarea class="" name="message" required [(ngModel)]="message"></textarea>
+            <label>Message:</label>
+          </div>
+           <button class="submit-btn" [@fadeInOut]>Send Email</button>  
+        </form>
+        
+      </div>
+      
+  </section> 
+  

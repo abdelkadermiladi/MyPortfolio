@@ -1,0 +1,56 @@
+/* CSS for the hover effect on icons */
+.user .tech i {
+    font-size: 90px;
+    margin: 10px 10px;
+    transition: font-size 0.3s ease;
+    position: relative; /* Add relative positioning to create a stacking context */
+  }
+  
+  /* Increase the icon size on hover */
+  .user .tech i:hover {
+    font-size: 100px;
+  }
+  
+  /* Style the tooltip */
+  .user .tech i::after {
+    content: attr(data-tooltip); /* Display the tooltip text from data-tooltip attribute */
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7); /* Background color for the tooltip */
+    color: #fff; /* Text color for the tooltip */
+    padding: 5px 10px; /* Padding for the tooltip */
+    border-radius: 5px; /* Rounded corners for the tooltip */
+    opacity: 0; /* Initially hide the tooltip */
+    transition: opacity 0.3s ease;
+    top: 100%; /* Position the tooltip below the icon */
+    left: 50%; /* Center the tooltip horizontally */
+    transform: translateX(-50%); /* Center the tooltip horizontally */
+    font-size: 14px;
+  }
+  
+  /* Show the tooltip on hover */
+  .user .tech i:hover::after {
+    opacity: 1;
+  }
+  
+  /* Flexbox layout for symmetric display */
+  .user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the sections horizontally */
+    align-items: flex-start; /* Align sections to the top */
+  }
+  
+  .tech {
+    flex: 1 1 calc(50% - 20px); /* Make sections take 50% width with margin adjustment */
+    margin: 10px;
+    text-align: center; /* Center the content within each section */
+  }
+  
+  /* Media query for layout changes on smaller screens */
+  @media (max-width: 768px) {
+    .tech {
+      flex: 1 1 100%; /* Make sections take full width on smaller screens */
+      margin: 10px 0; /* Adjust margin for spacing */
+    }
+  }
+  

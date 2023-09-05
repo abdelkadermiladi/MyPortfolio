@@ -1,0 +1,25 @@
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text horizontally */
+  }
+  
+  .experience-item {
+    margin-bottom: 20px;
+    max-width: 1400px; /* Optional: Limit the width of the experience items */
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Add any additional styles or animations as needed */
+  

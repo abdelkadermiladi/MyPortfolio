@@ -1,0 +1,40 @@
+nav {
+    background-color: #007BFF; /* Blue background color */
+    color: #fff;
+    padding: 10px 0; /* Add some padding to top and bottom */
+  }
+  
+  .menu-items {
+    display: flex;
+    justify-content: space-around; /* Evenly space items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .menu-items a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px; /* Add padding to create space between items */
+  }
+  
+  .menu-items a.active {
+    font-weight: bold;
+  }
+  
+  /* Hover Animation */
+  .menu-items a:hover {
+    color: #0056b3; /* Change color on hover */
+    transition: color 0.3s ease-in-out; /* Add a smooth transition effect */
+  }
+  /* Hover Animation */
+a:hover {
+    color: #000000; /* Change color on hover */
+    transition: color 0.3s ease-in-out; /* Add a smooth transition effect */
+  }
+
+  
+  /* Hover Effect on Navbar Background */
+nav:hover {
+    background-color: #0099bc; /* Change the background color on hover */
+    transition: background-color 0.3s ease-in-out; /* Add a smooth transition effect */
+  }
+  
